@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/layout/activity_favourite.xml" value="0.19479166666666667" />
         <entry key="app/src/main/res/layout/activity_found.xml" value="0.35507246376811596" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.296195652173913" />
+        <entry key="app/src/main/res/layout/fragment_confirm_dialog.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/movie_item.xml" value="0.19479166666666667" />
         <entry key="app/src/main/res/layout/review_item.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/trailer_item.xml" value="0.35520833333333335" />

@@ -15,6 +15,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         loaderManager = LoaderManager.getInstance(this);
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
         recyclerViewPosters = findViewById(R.id.recyclerViewPosters);
-        recyclerViewPosters.setLayoutManager(new GridLayoutManager(this,2));
+        recyclerViewPosters.setLayoutManager(new GridLayoutManager(this,getColumnCount()));
         movieAdapter = new MovieAdapter();
         recyclerViewPosters.setAdapter(movieAdapter);
         switchSortBy = findViewById(R.id.switchSort);
@@ -103,6 +104,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 }
             }
         });
+    }
+
+    private int getColumnCount() {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int width = (int) (displayMetrics.widthPixels / displayMetrics.density);
+        return width / 185 > 2 ? width / 185 :2;
     }
 
     @Override
