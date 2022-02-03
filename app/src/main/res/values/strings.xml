@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MoviePicker</string>
+    <string name="small_poster_description">Постер фильма малого размера</string>
+    <string name="sort_by_popularity">Топ по популярности</string>
+    <string name="sort_by_rating">Топ по рейтингу</string>
+    <string name="label_title">Название:</string>
+    <string name="original_title_label">Название в оригинале: </string>
+    <string name="label_rating">Рейтинг: </string>
+    <string name="label_release_date">Дата выхода: </string>
+    <string name="added_to_favourites">Добавлено в избранное</string>
+    <string name="deleted_from_favourites">Удалено из избранного</string>
+    <string name="menu_item_main">Главная</string>
+    <string name="menu_item_favourites">Избранное</string>
+    <string name="delete_all_favourites">Очистить избранное</string>
+    <string name="search_hint">Искать фильм по названию...</string>
+    <string name="nothing_found">\n\nТакого фильма у нас нет:(</string>
+    <string name="play_trailer">Запустить трейлер</string>
+</resources>

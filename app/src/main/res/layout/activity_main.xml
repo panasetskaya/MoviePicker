@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <Switch
+        android:id="@+id/switchSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:theme="@style/Widget.App.Switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/textViewPopularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_by_popularity"
+        android:onClick="onClickSetPopularity"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/switchSort"
+        app:layout_constraintEnd_toStartOf="@+id/switchSort"
+        app:layout_constraintTop_toTopOf="@+id/switchSort" />
+
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_by_rating"
+        android:textColor="@android:color/white"
+        android:onClick="onClickSetRating"
+        app:layout_constraintBottom_toBottomOf="@+id/switchSort"
+        app:layout_constraintStart_toEndOf="@+id/switchSort"
+        app:layout_constraintTop_toTopOf="@+id/switchSort" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPosters"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchSort" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
