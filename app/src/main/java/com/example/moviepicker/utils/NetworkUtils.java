@@ -136,24 +136,14 @@ public class NetworkUtils {
         return result;
     }
 
-    public static JSONObject getJSONBySearchQuery(String query) {
+    public static URL buildSearchUrl(String query) {
         URL url = null;
         try {
             url = new URL("https://api.themoviedb.org/3/search/movie?api_key=b513a81069845a70e812028642a23df1&query="+query);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        JSONObject result = null;
-        if (url!=null) {
-            try {
-                result = new JSONLoadTask().execute(url).get();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        return result;
+        return url;
     }
 
     public static class JSONLoader extends AsyncTaskLoader<JSONObject> {
